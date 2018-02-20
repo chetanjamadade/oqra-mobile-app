@@ -1,0 +1,29 @@
+<ion-view view-title="Video Review" hide-nav-bar="true" hide-back-button="false">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_videoreview" id="videoreview">
+    
+    <!-- Header bar -->
+    <ion-header-bar class="bar-black padding opacity-50">
+        <div class="buttons"><a ng-click="goBack()"><i class="icon ion-android-arrow-back placeholder-icon"></i></a></div>
+        <h1 class="title">Record Your Review</h1>
+        <div class="buttons right_button right_button_send"><a ng-click="uploadVideo()">Send</a></div>
+        <!-- <div class="buttons right_button"><a ng-click="uploadVideo()"><i class="icon ion-paper-airplane placeholder-icon"></i></a></div> -->
+    </ion-header-bar>
+    
+    <div id="outer_cont" class="row responsive-sm">
+        <div id="play"></div>
+    </div>
+
+    <ion-footer-bar class="opacity-60">
+        <div class="col buttons"></div>
+        <div class="col buttons text-center" ng-click="recordVideo()">
+            <button class="transparent"><img src="img/camera-start-button.png"></button>
+        </div>
+        <div class="col buttons text-center"></div>
+        <!--div class="col buttons text-center" ng-click="doSomething()">
+            <button class="transparent"><img src="img/camera-rotate-button.png"></button>
+        </div-->
+    </ion-footer-bar>
+    </ion-content>
+
+</ion-view>
+

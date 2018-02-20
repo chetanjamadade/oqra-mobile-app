@@ -1,0 +1,75 @@
+<ion-view view-title="Choose Location" hide-nav-bar="true" hide-back-button="false" ng-click="bodyClick()">
+    <ion-content scroll="false" has-header="false" drag-content="false" >
+    
+    <!-- Header bar -->
+    <ion-header-bar class="bar-black padding" >
+        <a ng-click="goBack()"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+       
+    </ion-header-bar>
+
+
+<div class="container" id="professional">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header-user">
+                <div class="logo">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <h1>Choose your Location</h1>
+            </div>
+        </div>
+
+<div class="col-xs-12">
+            <div id="rightContent" ng-hide="results.length">
+                <div class="row responsive-sm">
+                    <div class="col text-center">
+                        <h2 class="heading" style="font-size:13px; color:#fff;">{{no_location}}</h2>
+                    </div>
+                </div>
+                <div class="row responsive-sm" ng-show="error">
+                    <div class="col text-center">
+                        <a ng-click="reload()"><button class="button button-xl button-red">Check Again</button></a>
+                    </div>
+                </div>
+            </div>    
+</div>        
+
+
+        <div class="col-xs-12">
+             
+            <div class="row professional">
+
+            <ion-list>
+                <ion-item ng-repeat="result in results track by $index">
+                   <div data-ng-click="chooseLocation(result.id)">
+                        <div class="col-xs-12 col-sm-12 pro-pad">
+                            <a href="#">
+                                <!-- <img src="img/location2.png"> -->
+                                <p class="map-icon"><i class="fa fa-map"></i></p>
+                                <p>{{ result.name }}<br>{{ result.address }}</p>
+                            </a>
+                        </div> 
+                    </div>
+                </ion-item>
+
+            </ion-list>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="active-screen">
+                <ul>
+                    <li ></li>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+
+    </ion-content>
+</ion-view>

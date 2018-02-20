@@ -1,0 +1,94 @@
+<ion-view view-title="Login" hide-nav-bar="true" hide-back-button="false" ng-click="bodyClick()">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_newcustomer" id="newcustomer">
+
+        <ion-header-bar class="bar-black padding">
+            <a ui-sref="app.dash"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+        </ion-header-bar>
+
+        <div class="container login-screen" id="new-template">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-user">
+                        <div class="logo">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <h1>Login</h1>
+                        <h2>Enter your details</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="newuser-form">
+                        <form>
+                            <div class="form-part f-email">
+                                <input type="email" ng-model="client.Email" name="Email" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-part f-pass">
+                                <input type="password" ng-model="client.Password" name="Password" placeholder="Password" required>
+                            </div>
+                            <p class="privacy-text">We take your Privacy very seriously and your information is NEVER shared.</p>
+                            <input type="submit" style="position:absolute; left:-9999px; width:1px; height:1px;"/>
+                            <div class="user-btns">
+                                <a href="#" class="btn-new" ng-click="login()">Log in</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+</ion-view>
+
+<!-- <ion-view view-title="Login" hide-nav-bar="true" hide-back-button="false" ng-click="bodyClick()">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_newcustomer" id="newcustomer">
+
+
+        <ion-header-bar class="bar-black padding">
+            <a ui-sref="app.dash"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+        </ion-header-bar>
+
+        <div class="container" id="new-template">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-user">
+                        <div class="logo">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <h1>{{getFromDictionary("Login")}}</h1>
+                        <h2>{{getFromDictionary("Details")}}</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="newuser-form">
+                        <form>
+                            <div class="form-part f-email">
+                                <input type="email" ng-model="client.Email" name="Email" placeholder="{{getFromDictionary('Email')}}" required>
+                            </div>
+                            <div class="form-part f-pass">
+                                <input type="password" ng-model="client.Password" name="Password" placeholder="{{getFromDictionary('Password')}}" required>
+                            </div>
+                            <p class="privacy-text">{{getFromDictionary("Privacy")}}</p>
+                            <input type="submit" style="position:absolute; left:-9999px; width:1px; height:1px;"/>
+                            <div class="user-btns">
+                                <a href="#" class="btn-new" ng-click="login()">{{getFromDictionary("Login")}}</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="active-screen">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+
+    </ion-content>
+</ion-view> -->

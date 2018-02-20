@@ -1,0 +1,470 @@
+/*/Landscape/*/
+@media screen and (device-width: 1024px) and (device-height: 600px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1){
+	.header .logo{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.header-user{
+		padding-top: 20px;
+		h1{
+			font-size: 28px;
+		}
+		h2{
+			font-size: 24px;
+		}
+		.logo{
+			i{
+				font-size: 40px;
+			}
+		}
+	}
+
+/*First logins AS screen*/
+#select-user .user-btns .btn-new,#select-user .btn-exist{
+	height: 60px !important;
+	padding-top: 0px !important;
+	line-height: 60px;
+	font-size: 26px;
+	width: 300px;	
+}
+.home-info h1{
+	font-size: 48px;
+}
+
+/*New user screen*/
+	.newuser-form{
+		padding-top: 20px;
+	}
+	.newuser-form .form-part{ 
+		height: 40px;
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-bottom: 10px;
+
+			&.f-name,&.f-lastname{
+				&:after{
+					content: "\f2be";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}
+			}	
+			&.f-email{
+				&:after{
+					content: "\f003";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}				
+			}	
+			&.f-phone{
+				&:after{
+					content: "\f095";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}				
+			}	
+			&.f-pass{
+				&:after{
+				    content: "\f084";
+				    font-family: 'FontAwesome';
+				    position: absolute;
+				    right: 0px;
+				    top: -10px;
+				    font-size: 36px;
+				    color: $new-btn-color-back;
+				}
+			}	
+		input{
+			height: 40px;
+			font-size: 28px;
+			line-height: 40px;
+		}
+	}
+	.newuser-form p label{
+		font-size: 24px;
+	}
+	#new-template{
+		.user-btns .btn-new{
+			height: 50px;
+			padding-top: 0px;
+			line-height: 50px;
+			font-size: 26px;
+			width: 300px;
+		}
+	}
+	.existing-form form{ 
+		i{
+			top: 12px;
+    		font-size: 36px;
+		}		
+		input.phone-number{
+			font-size: 26px;
+			height: 60px;
+			line-height: 60px;
+		}
+		p{
+			label{
+				font-size: 24px;
+			}
+		}
+	}
+	#existing{
+		.user-btns .btn-new{
+			height: 50px;
+			padding-top: 0px;
+			line-height: 50px;
+			font-size: 26px;
+			width: 300px;
+		}		
+	}
+	#audio-screen .audio-click{
+		width: 100px;
+		height: 100px;
+		i{
+			font-size: 40px;
+		}
+	}
+	#audio-screen timer{
+		font-size: 48px;
+	}
+	#audio-screen{
+		.user-btns{
+			padding-top: 0px; 
+			.btn-new{
+				height: 50px;
+				padding-top: 0px;
+				line-height: 50px;
+				font-size: 26px;
+				width: 300px;
+			}
+		}
+		#button-slide button{
+			width: 300px;
+    		height: 50px;
+    		font-size: 26px;
+    		i{
+    			font-size: 20px;
+    		}
+		}
+	}
+
+	/*Rate us screen*/
+	.rate-us{
+		padding-top: 60px;
+		a{
+			width: 140px;
+			height: 140px;
+			border-radius: 70px;
+			img{
+				width: 90px;
+			}
+		}
+	}	
+
+	/*Positive satisfieed SHARE screen*/
+	#positive-review{
+		.status-icon{
+			width: 80px;
+		}
+		.satisfied{
+			font-size: 30px;
+		}
+		.existing-form{
+			padding-top: 40px;
+		}
+		.btn-new{
+			height: 50px;
+			padding-top: 0px;
+			line-height: 50px;
+			font-size: 26px;
+			width: 300px;			
+		}
+	}
+
+	/*Write review*/
+	#write-review-screen{
+			.btn-new{
+				height: 50px;
+				padding-top: 0px;
+				line-height: 50px;
+				font-size: 26px;
+				width: 300px;
+			}		
+	}
+
+	/*Thank you screen*/
+	#thanks .social-share	{
+		margin: 50px auto;
+	}
+}	
+
+/*Login screen*/
+.login-screen{
+	.newuser-form{
+		padding-top: 60px;
+		.user-btns{
+			padding-top: 60px;
+		}
+	}
+}
+
+
+/*********************************************************/
+/*********************************************************/
+
+/*Portrait*/
+@media screen and (device-width: 600px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1){
+
+/*Overwrites*/
+#professional .professional .item{
+	width: 100%;
+	padding: 0px 15px !important;
+}
+
+/*Dash*/
+#dash{
+	.user-btns{
+		padding-top: 200px;
+	}
+}
+/*Choose professional*/
+.professional{
+	height: 80vh;
+}
+
+	.header .logo{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.header-user{
+		padding-top: 20px;
+		h1{
+			font-size: 28px;
+		}
+		h2{
+			font-size: 24px;
+		}
+		.logo{
+			i{
+				font-size: 40px;
+			}
+		}
+	}
+/*New client*/
+#newcustomer{
+	form{
+		margin-top: 60px;
+	}
+	.user-btns{
+		margin-top: 60px;
+	}
+}
+
+/*First logins AS screen*/
+#select-user .user-btns .btn-new,#select-user .btn-exist{
+    height: 80px!important;
+    padding-top: 0px!important;
+    line-height: 80px;
+    font-size: 30px;
+    width: 340px;
+}
+.home-info h1{
+	font-size: 48px;
+}
+
+/*New user screen*/
+	.newuser-form{
+		padding-top: 20px;
+	}
+	.newuser-form .form-part{ 
+		height: 50px;
+		width: 98%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-bottom: 10px;
+		
+			&.f-name,&.f-lastname{
+				&:after{
+					content: "\f2be";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}
+			}	
+			&.f-email{
+				&:after{
+					content: "\f003";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}				
+			}	
+			&.f-phone{
+				&:after{
+					content: "\f095";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+    				top: -10px;
+    				font-size: 34px;	
+					color: $exist-btn-color-back;
+				}				
+			}	
+			&.f-pass{
+				&:after{
+				    content: "\f084";
+				    font-family: 'FontAwesome';
+				    position: absolute;
+				    right: 0px;
+				    top: -10px;
+				    font-size: 36px;
+				    color: $new-btn-color-back;
+				}
+			}	
+		input{
+			height: 50px;
+			font-size: 28px;
+			line-height: 50px;
+		}
+	}
+	.newuser-form p label{
+		font-size: 24px;
+	}
+	#new-template{
+		.user-btns .btn-new{
+			height: 80px;
+			padding-top: 0px;
+			line-height: 80px;
+			font-size: 30px;
+			width: 340px;
+		}
+	}
+	.existing-form form{ 
+		i{
+			top: 12px;
+    		font-size: 36px;
+		}		
+		input.phone-number{
+			font-size: 26px;
+			height: 60px;
+			line-height: 60px;
+		}
+		p{
+			label{
+				font-size: 24px;
+			}
+		}
+	}
+	#existing{
+		.user-btns .btn-new{
+			height: 80px;
+			padding-top: 0px;
+			line-height: 80px;
+			font-size: 30px;
+			width: 340px;
+		}		
+	}
+	#audio-screen .audio-click{
+		width: 100px;
+		height: 100px;
+		i{
+			font-size: 40px;
+		}
+	}
+	#audio-screen timer{
+		font-size: 48px;
+	}
+	#audio-screen{
+		.user-btns{
+			padding-top: 0px; 
+			.btn-new{
+			height: 80px;
+			padding-top: 0px;
+			line-height: 80px;
+			font-size: 30px;
+			width: 340px;
+			border-radius: 40px;
+			}
+		}
+		#button-slide button{
+			height: 80px;
+			padding-top: 0px;
+			line-height: 80px;
+			font-size: 30px;
+			width: 340px;
+			border-radius: 40px;
+    		i{
+    			font-size: 20px;
+    		}
+		}
+	}
+
+	/*Rate us screen*/
+	.rate-us{
+		padding-top: 60px;
+		a{
+			width: 140px;
+			height: 140px;
+			border-radius: 70px;
+			img{
+				width: 90px;
+			}
+		}
+	}	
+
+	/*Positive satisfieed SHARE screen*/
+	#positive-review{
+		.status-icon{
+			width: 80px;
+		}
+		.satisfied{
+			font-size: 30px;
+		}
+		.existing-form{
+			padding-top: 40px;
+		}
+		.btn-new{
+			height: 80px;
+			padding-top: 0px;
+			line-height: 80px;
+			font-size: 30px;
+			width: 340px;		
+		}
+	}
+
+	/*Write review*/
+	#write-review-screen{
+			.btn-new{
+				height: 50px;
+				padding-top: 0px;
+				line-height: 50px;
+				font-size: 26px;
+				width: 300px;
+			}		
+	}
+
+	/*Thank you screen*/
+	#thanks .social-share	{
+		margin: 50px auto;
+	}
+
+
+}	

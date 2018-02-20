@@ -1,0 +1,149 @@
+<ion-view view-title="Choose professional" hide-nav-bar="true" hide-back-button="false" ng-click="bodyClick()">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_existingcustomer" id="existing_customer">
+
+        <!-- Header bar -->
+        <ion-header-bar class="bar-black padding" style="background-color:#003045;">
+            <a ng-click="goBack()"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+            <h1 class="title">Choose Professional</h1>
+        </ion-header-bar>
+
+        <div id="main_cont" class="row responsive-sm">
+
+            <!-- Left content -->
+            <div class="col col-33 responsive_left">
+                <div id="leftContent">
+                    <!--Here is previous color for span below  style="color:#2945d7 !important;"-->
+                    <span class="step">Professional</span>
+                    <h2 class="heading">Choose Professional</h2>
+                </div>
+            </div>
+
+            <!-- Right content -->
+            <div class="col">
+                <div id="rightContent" ng-hide="results.length">
+                    <div class="row responsive-sm">
+                        <div class="col text-center">
+                            <h2 class="heading" style="font-size:13px; color:#fff;">{{no_professional}}</h2>
+                        </div>
+                    </div>
+                    <div class="row responsive-sm" ng-show="error">
+                        <div class="col text-center">
+                            <a ng-click="reload()"><button class="button button-xl button-red">Check Again</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Results -->
+                <ion-scroll zooming="true" direction="y" style="width: 100%; height: 100%">
+                    <div id="rightContent" class="customer_listing" ng-show="results.length">
+                        <div class="col">
+                            <ion-list>
+
+                                <ion-item class="customer col col-center" ng-repeat="result in results track by $index">
+                                    <div class="row item-text-center" data-ng-click="chooseProfessional(result.id)">
+                                        <!--<div class="col col-20 col-center">
+                                            <div class="custom_avatar">
+                                                <img src="img/location.png" />
+                                            </div>
+                                        </div>-->
+                                        <div class="col col-center">
+                                            <div class="row">
+                                                <div class="col col-center">
+                                                    <h3>{{ result.name }}</h3></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col col-center">
+                                                    <h4>{{ result.adress }}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-10 col-center text-right arrow">
+                                            <img src="img/arrow-right.png" class="image_responsive_7">
+                                        </div>
+                                    </div>
+                                </ion-item>
+
+                            </ion-list>
+                        </div>
+                    </div>
+                </ion-scroll>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+
+
+<div class="container" id="professional">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header-user">
+                <div class="logo">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <h1>Choose your professional</h1>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row professional">
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>  
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>  
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>                                                                          
+                <div class="col-xs-12 col-sm-6 pro-pad">
+                    <a href="#">
+                        <img src="gfx/proffesional.jpg">
+                        <p>Ajay <b>Tejwani</b></p>
+                    </a>
+                </div>                                      
+            </div>
+
+
+        </div>
+    </div>
+</div>

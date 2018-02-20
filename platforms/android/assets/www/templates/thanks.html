@@ -1,0 +1,43 @@
+<ion-view view-title="Your Rating" hide-nav-bar="true" hide-back-button="false">   
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_thanks" id="thanks">
+    
+        <!-- Header bar -->
+        <ion-header-bar class="bar-black padding" >
+        </ion-header-bar>
+
+<div class="container" id="thanks">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header-user">
+                <div class="logo">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <h1 ng-show="your_rate <= 3">{{ thanks_text }}</h1>
+                <h1 ng-show="your_rate >= 4">Thanks for your feedback!</h1>
+                <h4 ng-show="socialNetworks.length && your_rate >= 4">Please click on icons below to share with friends and family</h4>
+            </div>
+        </div>
+        <div class="col-xs-12" ng-show="your_rate > 3">
+            <div class="social-share">
+                <div class="social-icon"  ng-repeat="network in socialNetworks" ng-if="network != 'google'">
+                    <a ng-click="shareit(network)"><i class="fa fa-{{network}}" aria-hidden="true"></i></a>
+                </div>                                          
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Back to home button-->
+            <div class="back-to-home">
+                <a ui-sref="app.dash">Back to home screen</a>
+            </div>
+<!--End button-->       
+
+       
+    
+    </ion-content>
+</ion-view>
+
+
+
+

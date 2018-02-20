@@ -1,0 +1,60 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-audio-recorder-api": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.smokeapp"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.dmsapiens.smokeapp"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.dmsapiens.smokeapp"
+        }
+    },
+    "dependent_plugins": {}
+}

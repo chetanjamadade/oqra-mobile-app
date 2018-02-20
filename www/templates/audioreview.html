@@ -1,0 +1,53 @@
+<ion-view view-title="Audio Review" hide-nav-bar="true" hide-back-button="false">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_review" id="audio_review">
+    
+    <!-- Header bar -->
+    <ion-header-bar class="bar-black padding">
+        <a ng-click="goBack()"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+        <!-- <div class="buttons right_button"><a ng-click="upload()"><i class="icon ion-paper-airplane placeholder-icon"></i></a></div> -->
+    </ion-header-bar>
+
+<div class="container-fluid" id="audio-screen">
+    <div class="row">
+        <div class="col-xs-12 bg-lighter">
+            <div class="header-user write-rev">
+                <div class="logo">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </div>
+                <h1>Audio Review</h1>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="existing-form">
+                <form>
+                    <a ng-click="record()" class="audio-click" />
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </a>
+
+                    
+                    <div id="stopwatch" class="col text-center">
+                        <timer autostart="false">{{mminutes}}:{{sseconds}}</timer>
+                    </div>
+
+                    <div id="button-slide">
+                        <button ng-show="recording" ng-click="record()" class="button button-xl button-red"><i class="fa fa-stop" aria-hidden="true"></i> Stop Recording</button>
+                        <button ng-show="canPlay" ng-click="record()" class="button button-xl button-red" style="margin-bottom:5px !important;"><i class="fa fa-microphone" aria-hidden="true"></i> Re-record</button>
+                        <button ng-show="canPlay" ng-click="playback()" class="button button-xl button-red"><i class="fa fa-play" aria-hidden="true"></i> Play Review</button>
+                    </div>
+
+                    <div class="btn-send-audio">
+                        <div class="user-btns">
+                            <a class="btn-new" ng-click="upload()" >Send Review</a>
+                        </div>
+                    </div>                     
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+
+    </ion-content>
+</ion-view>
+

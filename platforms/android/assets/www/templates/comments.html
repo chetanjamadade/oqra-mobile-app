@@ -1,0 +1,52 @@
+<ion-view view-title="Smoke - 1 Question Survey" hide-back-button="false">
+    <ion-content scroll="false" has-header="true" drag-content="false">
+    
+        <div class="row responsive-sm">
+            <div class="col text-center">
+                <img src="img/logo.png"/>
+            </div>
+        </div>
+        
+        <div class="row responsive-sm">
+            <div class="col">
+                <div id="leftContent">
+                    <h1><span>You Are</span><br />{{rate_text}}</h1>
+                    <h2>Your rating is: {{your_rate}}</h2>
+                    <p>Sorry to hear about your experience.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div id="rightContent">
+                    <div class="row responsive-sm">
+                        <div class="col">
+                            <p>Please provide details!!</p>
+                            <div class="row responsive-sm">
+                                <div class="col">
+                                    <label class="item item-input">
+                                        <input type="text" ng-model="exp.title" name="title" placeholder="Please provide Title (required)"/>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row responsive-sm">
+                                <div class="col">
+                                    <label class="item item-input">
+                                        <textarea ng-model="exp.desc" name="desc" placeholder="Write a Description (required)"></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row responsive-sm">
+                                <div class="col">
+                                    <small>We take your privacy very seriously - your information is NEVER shared.</small> 
+                                </div>
+                                <div class="col">
+                                    <button ng-click="proceed()" class="button button-assertive button-full">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view view-title="One Question Application Survey" hide-nav-bar="true" hide-back-button="true">
+    <nav-page hide-nav-bar="true">
+    
+    <ion-content scroll="false" has-header="true" drag-content="false" class="background" id="dash">
+
+        <div class="container" id="select-user">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header">
+                        <div class="logo">
+                            <img src="{{results.logo}}" class="logo-img">
+                            <!-- <img src="gfx/logo.png" class="logo-img"> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="home-info">
+                        <h1>1-Question Survey</h1>
+                        <h2>We need your feedback</h2>              
+                    </div>
+                    <div class="user-btns">
+                        <a ui-sref="app.newuser" class="btn-new">{{results.new_text}}</a>
+                        <a ui-sref="app.existing" class="btn-exist">{{results.existing_text}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    
+    </ion-content>
+</ion-view>
+
+

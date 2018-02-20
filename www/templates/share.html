@@ -1,0 +1,45 @@
+<ion-view view-title="Rate Our Service" hide-nav-bar="true" hide-back-button="false" cache="false">   
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_satisfied" id="satisfied" cache="false">
+    
+        <!-- Header bar -->
+        <ion-header-bar class="bar-black padding">
+            <a ng-click="goBack()"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+            <!--div class="buttons right_button"><a ui-sref="app.profile"><i class="icon ion-ios-person-outline"></i></div></a-->
+        </ion-header-bar>
+
+<div class="container" id="positive-review" style="padding-top: 60px;">
+    <div class="row">
+        <div class="col-xs-12" style="text-align: center;">
+            <span class="you_are" style="color:#fff">YOU ARE</span>
+            <img src="gfx/ex-satisfied.png" style="display: block; margin: 0 auto;" class="status-icon">
+            <h1 class="satisfied" style="color:#fff;">{{ rate_text }}</h2>
+        </div>
+        <div class="col-xs-12">
+            <div class="existing-form">
+                    <div class="user-btns" style="padding-top: 0px;">
+                        <a ui-sref="app.writereview" class="btn-new rev-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Write a Review</a>
+                        <a ui-sref="app.audioreview" class="btn-new rev-btn"><i class="fa fa-volume-up" aria-hidden="true"></i>Record Audio</a>
+                        <a ng-click="recordVideo()" class="btn-new rev-btn"><i class="fa fa-video-camera" aria-hidden="true"></i>Record Video</a>
+                    </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="active-screen">
+                <ul>
+                    <li ></li>
+                    <li></li>
+                    <li></li>
+                    <li class="active"></li>
+                </ul>
+            </div>
+
+       
+    
+    </ion-content>
+</ion-view>
+
+
+
+

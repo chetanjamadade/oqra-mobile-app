@@ -1,0 +1,72 @@
+<ion-view view-title="Rate Our Service" hide-nav-bar="true" hide-back-button="false" cache="false">   
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_satisfied" id="pickreview" cache="false">
+    
+        <!-- Header bar -->
+        <ion-header-bar class="bar-black padding" >
+            <h1 class="title">Review</h1>
+            <!--div class="buttons right_button"><a ui-sref="app.profile"><i class="icon ion-ios-person-outline"></i></div></a-->
+        </ion-header-bar>
+        
+        <div id="main_cont" class="row responsive-sm">
+            
+            <!-- Left content -->
+            <div class="col col-33 responsive_left">
+                <div id="leftContent">
+                    <span class="step" >REVIEW</span>
+                    <h2 class="heading" >{{ rate_text }}</h2>
+                    <p class="description" ng-show="rev.your_rate > 3"> Great! <br> Click below to make your selection:</p>
+                    <p class="description" ng-show="rev.your_rate <= 3">Click below to make your selection:</p>
+                </div>
+            </div> 
+
+            <!-- Right content -->
+            <div class="col text-center">
+                <div id="rightContent">
+                    <div class="row responsive-sm" ng-show="rev.your_rate > 3">
+                        <div class="col text-center">
+                            <img class="happy" src="img/happy-button.png"/>
+                        </div>
+                    </div>
+
+                    <div class="row responsive-sm" ng-show="rev.your_rate == 3">
+                        <div class="col text-center">
+                            <img class="happy" src="img/neutral.png"/>
+                        </div>
+                    </div>
+
+                    <div class="row responsive-sm" ng-show="rev.your_rate < 3">
+                        <div class="col text-center">
+                            <img class="happy" src="img/sad-button.png"/>
+                        </div>
+                    </div>
+                    
+                    <div class="row responsive-sm responsive_right responsive_left">
+                        <span class="orange_line" style="border-color:#fff !important;"></span>
+                    </div>
+
+                    <div class="row  responsive-sm responsive_right">
+                        <p class="description" style="color:#fff !important;" ng-show="rev.your_rate > 3"> Great! <br/><br/> Click below to make your selection:</p>
+                    <p class="description" style="color:#fff !important;" ng-show="rev.your_rate <= 3">Click below to make your selection:</p>
+                    </div>
+                    
+                    <div id="button-slide" style="width:100%;">
+                        <a ui-sref="app.writereview"><button class="button button-xl button-orange">Write A Review</button></a>
+                        <a ui-sref="app.audioreview"><button class="button button-xl button-orange">Record An Audio Review</button></a>
+                        <a ng-click="recordVideo()"><button class="button button-xl button-orange">Record A Video Review</button></a>
+                        <!--a ui-sref="app.videoreview"><button class="button button-xl button-orange">Record A Video Review</button></a-->
+                        <!--a ui-sref="app.audioreview"><button ng-click="" class="button button-xl button-orange">Record An Audio Review</button></a>
+                        <a ui-sref="app.videoreview"><button ng-click="" class="button button-xl button-orange">Record A Video Review</button>
+                        <a ui-sref="app.dash"><button ng-click="" class="button button-xl button-red">Complete Survey</button-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+    
+    </ion-content>
+</ion-view>
+
+
+
+

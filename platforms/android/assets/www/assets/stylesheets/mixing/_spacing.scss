@@ -1,0 +1,26 @@
+.no-pad {
+  padding: 0;
+  @include breakpoint(phone) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.no-pad-l {
+  padding-left: 0;
+  @include breakpoint(phone) {
+    padding-left: 15px;
+  }
+
+}
+.no-pad-r {
+  padding-right: 0;
+  @include breakpoint(phone) {
+    padding-right: 15px;
+  }
+
+}
+
+.no-mar {
+  margin: 0;
+}

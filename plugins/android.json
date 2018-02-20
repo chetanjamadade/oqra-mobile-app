@@ -1,0 +1,61 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-audio-recorder-api": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.dmsapiens.oqra"
+        }
+    }
+}

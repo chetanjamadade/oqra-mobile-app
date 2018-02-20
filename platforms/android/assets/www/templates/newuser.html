@@ -1,0 +1,60 @@
+<ion-view view-title="New Client" hide-nav-bar="true" hide-back-button="false" ng-click="bodyClick()">   
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_newcustomer" id="newcustomer">
+    
+    <!-- Header bar -->
+    <ion-header-bar class="bar-black padding">
+        <a ui-sref="app.dash"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+    </ion-header-bar>
+
+<div class="container" id="new-template">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header-user">
+                <div class="logo">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <h1>Enter your details</h1>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="newuser-form">
+                <form>
+                    <div class="form-part f-name">
+                        <input type="text" ng-model="newuser.Firstname" name="Firstname" placeholder="First Name" >
+                    </div>
+                    <div class="form-part f-lastname">
+                        <input type="text" ng-model="newuser.Lastname" name="Lastname" placeholder="Last Name (optional)">
+                    </div>
+                    <div class="form-part f-email">
+                        <input type="email" ng-model="newuser.Email" name="Email" placeholder="E-mail (optional)">
+                    </div>
+                    <div class="form-part f-phone">
+                        <input type="tel" mask="(999) 999-9999" ng-model="newuser.Cell" name="Cell" placeholder="Phone number">
+                    </div>
+                    <p class="privacy-text">We take your Privacy very seriously and your information is NEVER shared.</p>                   
+                    <p>
+                      <input type="checkbox" id="checkbox-2-1" class="regular-checkbox big-checkbox" value="yes" ng-model="newuser.Terms" ng-checked="newuser.Terms"/>
+                        <label ng-click="showTerms()"><a>I accept Terms and Conditions</a></label>
+                    </p>
+                    <input type="submit" style="position:absolute; left:-9999px; width:1px; height:1px;"/>
+                    <div class="user-btns">
+                        <a href="#" class="btn-new" ng-click="startSurvey()">Start</a>
+                    </div>                  
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+            <div class="active-screen">
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+    
+    </ion-content>
+</ion-view>

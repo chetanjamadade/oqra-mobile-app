@@ -1,0 +1,62 @@
+<ion-view view-title="My Profile" hide-nav-bar="true" hide-back-button="false">
+    <ion-content scroll="false" has-header="false" drag-content="false" class="background_profile" id="profile">
+    
+    <!-- Header bar -->
+    <ion-header-bar class="bar-black padding">
+        <a ui-sref="app.dash"><i class="icon ion-android-arrow-back placeholder-icon"></i></a>
+        <h1 class="title">My Profile</h1>
+    </ion-header-bar>
+
+    <div id="main_cont" class="row responsive-sm">
+
+        <!-- Left content -->
+        <div id="leftContent" class="col col-33 text-center">
+                <a class="item-avatar">
+                    <img src="img/human.png"/>
+                </a>
+                <span class="step">CHANGE PHOTO</span>
+                <h2 class="heading">Natalie Dormer</h2>
+        </div>
+
+        <!-- Right content -->
+        <div class="col">
+            <!-- Item list -->
+            <div id="rightContent" class="item_list background_gray">
+                <ul class="list transparent">
+                    <li class="row item transparent">
+                        <div class="col col-10 col-center col-offset-10 first"><img src="img/calendar-icon-64.png" class="image_responsive_50"></div>
+                        <div class="col col-33  col-center second">Date of Birth</div>
+                        <div class="col col-center lightGray col-offset-10 third">02-11-1982</div>
+                        <div class="col col-10 col-center  text-center fourth"><a ui-sref="app.dash" ><img src="img/pencil-icon-64.png" class="image_responsive_30"></a></div>
+                    </li>
+                    <li class="row item transparent">
+                        <div class="col col col-center col-10 col-offset-10 first"><img src="img/user2-64.png" class="image_responsive_50"></div>
+                        <div class="col col-33 col-center  second">Customer ID</div>
+                        <div class="col col-center lightGray col-offset-10 col-offset-10 third">0401970</div>
+                        <div class="col col-center col-10 fourth">&nbsp;</div>
+                    </li>
+                    <li class="row item transparent">
+                        <div class="col col col-center col-10 col-offset-10 first"><img src="img/done-icon-64.png" class="image_responsive_50"></div>
+                        <div class="col col-33 col-center second">Surveys Done</div>
+                        <div class="col col-center lightGray col-offset-10 third">250</div>
+                        <div class="col col-center col-10 fourth">&nbsp;</div>
+                    </li>
+                    <li class="row item transparent">
+                        <div class="col col col-center col-10 col-offset-10 first"><img src="img/positive-icon-64.png" class="image_responsive_50"></div>
+                        <div class="col col-33 col-center second">Positive Surveys</div>
+                        <div class="col col-center lightGray col-offset-10 third">148</div>
+                        <div class="col col-center col-10 fourth">&nbsp;</div>
+                    </li>
+                    <li class="row item transparent">
+                        <div class="col col-center col-10 col-offset-10 first"><img src="img/negative-icon-64.png" class="image_responsive_50"></div>
+                        <div class="col col-33 col-center second">Negative Surveys</div>
+                        <div class="col col-center lightGray col-offset-10 third">254</div>
+                        <div class="col col-center col-10 fourth">&nbsp;</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </ion-content>
+</ion-view>

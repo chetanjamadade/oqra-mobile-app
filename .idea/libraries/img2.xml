@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="img2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/ios/build/emulator/VistageVentures.app/www/img.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

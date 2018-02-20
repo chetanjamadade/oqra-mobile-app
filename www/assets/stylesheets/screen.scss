@@ -1,0 +1,1193 @@
+@import "bootstrap";
+@import "mixing/breakpoint";
+@import "mixing/helpers";
+@import "mixing/spacing";
+@import "mixing/transition";
+@import "mixing/fonts";
+@import "awesome/font-awesome";
+@import "colors";
+
+
+$font-sans-pro-bold: 'Source Sans Pro Bold';
+$font-sans-pro-regular: 'Source Sans Pro Regular';
+$font-sans-pro-light: 'Source Sans Pro Light';
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+/*from ionic overwrites*/
+.pane, .view{
+	background: transparent !important;
+}
+[nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"]{
+	background-color: $background-color;
+}
+.placeholder-icon {
+    color: #fff;
+    font-size: 20px;
+}
+.bar{
+	background: none;
+}
+.bar-black{
+	background: transparent;
+	border-bottom: none !important;
+}
+
+body{
+	background: $background-color;
+}
+
+h1,h2,h3,h4,h5,h6,p,span{
+	margin: 0px;
+}
+
+.fa-fb{
+	&:before{
+		content: "\f09a";
+	}
+}
+/*Home screen login 2 buttons*/
+.header{
+	.logo{
+		padding-top: 120px;
+		padding-bottom: 80px;
+		@include breakpoint(laptop){
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		.logo-img{
+			margin: 0 auto;
+			max-width: 300px;
+			height: 120px;
+			display: block;
+		}
+	}
+}
+
+
+.home-info{
+	text-align: center;
+	h1{
+		font-size: 58px;
+		font-family: $font-sans-pro-bold;
+		color: $color-home-text;
+		margin-bottom: 10px;
+	}
+	h2{
+		font-size: 36px;
+		font-family: $font-sans-pro-light;
+		color: $color-home-text;
+	}
+}
+
+
+
+.user-btns{
+	position: relative;
+	padding-top: 80px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;	
+	.btn-new{
+		width: 420px;
+		height: 100px;
+		background: $new-btn-color-back;
+		color: $btn-text-color;
+		display: inline-block;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 38px;
+		font-family: $font-sans-pro-bold;
+		padding-top: 20px;
+		margin: 10px;
+		@include breakpoint(laptop){
+			height: 80px;
+			padding-top: 15px;
+		}
+		@include breakpoint(tablet){
+			width: 300px;
+			height: 80px;
+			border-radius: 40px;
+			padding-top: 14px;
+			font-size: 32px;
+		}
+			@include breakpoint(phone){
+				width: 280px;
+				height: 70px;
+				border-radius: 35px;
+				padding-top: 16px;
+				font-size: 26px;
+			}
+				@include breakpoint(phone-port){
+					width: 100%;
+					margin: 10px 0px;
+					height: 50px;
+					padding-top: 5px;
+				}			
+		&:focus{
+			outline: none;
+			text-decoration: none;
+		}
+		&:hover{
+			background: darken($new-btn-color-back, 10%);
+			text-decoration: none;
+		}
+	}
+	.btn-exist{
+		width: 420px;
+		height: 100px;
+		margin: 10px;
+		background: $exist-btn-color-back;
+		color: $btn-text-color;
+		display: inline-block;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 38px;
+		font-family: $font-sans-pro-bold;
+		padding-top: 20px;
+		@include breakpoint(tablet){
+			width: 300px;
+			height: 80px;
+			border-radius: 40px;
+			padding-top: 14px;
+			font-size: 32px;
+		}
+			@include breakpoint(phone){
+				width: 280px;
+				height: 70px;
+				border-radius: 35px;
+				padding-top: 16px;
+				font-size: 26px;
+			}
+				@include breakpoint(phone-port){
+					width: 100%;
+					margin: 10px 0px;
+				}
+		&:focus{
+			outline: none;
+			text-decoration: none;
+		}
+		&:hover{
+			background: darken($exist-btn-color-back, 10%);
+			text-decoration: none;
+		}
+	}	
+}
+
+/*homepage*/
+#select-user{
+	.user-btns .btn-new{
+		@include breakpoint(laptop){
+			height: 100px !important;
+			padding-top: 20px !important;
+		}
+		@include breakpoint(tablet){
+			width: 300px;
+			height: 80px;
+			border-radius: 40px;
+			padding-top: 14px;
+			font-size: 32px;
+		}
+			@include breakpoint(phone){
+				width: 280px;
+				height: 70px;
+				border-radius: 35px;
+				padding-top: 16px;
+				font-size: 26px;
+			}
+				@include breakpoint(phone-port){
+					width: 100%;
+					margin: 10px 0px;
+					height: 50px;
+					padding-top: 5px;
+				}			
+		&:focus{
+			outline: none;
+			text-decoration: none;
+		}
+		&:hover{
+			background: darken($new-btn-color-back, 10%);
+			text-decoration: none;
+		}
+	}	
+}
+
+/*Existing user*/
+.header-user{
+	display: inline-block;
+	position: relative;
+	padding-top: 40px;	
+	width: 100%;	
+	text-align: center;
+	@include breakpoint(phone){
+		padding-top: 20px;
+	}
+	.logo{
+		padding-bottom: 10px;
+		i{
+			font-size: 70px;
+			color: $exist-btn-color-back;
+			@include breakpoint(phone-port){
+				font-size: 40px;
+			}
+		}
+	}
+		h1{
+			font-size: 54px;
+			font-family: $font-sans-pro-bold;
+			color: $color-home-text;
+			margin-bottom: 10px;
+			@include breakpoint(laptop){
+				font-size: 40px;
+			}
+			@include breakpoint(tablet){
+				font-size: 40px;
+			}
+			@include breakpoint(phone){
+				font-size: 28px;
+			}
+				@include breakpoint(phone-port){
+					font-size: 20px;
+				}
+		}
+		h2{
+			font-size: 32px;
+			font-family: $font-sans-pro-light;
+			color: $color-home-text;
+			@include breakpoint(laptop){
+				font-size: 26px;
+			}
+			@include breakpoint(tablet){
+				font-size: 26px;
+			}
+			@include breakpoint(phone){
+				font-size: 26px;
+			}
+				@include breakpoint(phone-port){
+					font-size: 18px;
+				}			
+		}	
+}
+
+.existing-form{
+	width: 100%;
+	padding-top: 60px;
+	form{
+		position: relative;
+		width: 460px;
+		margin: 0 auto;
+		display: block;
+		@include breakpoint(phone){
+			width: 100%;
+			padding: 0px 15px;
+		}
+		input.phone-number{
+			border-bottom: 1px solid $exist-btn-color-back;
+			color: $color-home-text;
+			font-size: 36px;
+			font-family: $font-sans-pro-regular;
+			width: 100%;
+			height: 90px;
+		    background: transparent;
+		    border-width: 0px 0px 1px 0px;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $exist-btn-color-back;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $exist-btn-color-back;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $exist-btn-color-back;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $exist-btn-color-back;
+			}		
+			&:focus{
+				outline: none;
+
+			}	
+		}
+		i{
+			position: absolute;
+			right: 0;
+			top: 20px;
+			font-size: 50px;
+			color: $exist-btn-color-back;
+		}
+
+		/*Checkbox*/
+		.regular-checkbox {
+			-webkit-appearance: none;
+			background-color: #fff;
+			border: 1px solid $exist-btn-color-back;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+			padding: 9px;
+			border-radius: 18px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			&:focus{
+				outline: none;
+			}
+		}		
+		.regular-checkbox:active, .regular-checkbox:checked:active {
+			outline: none;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+		}
+
+		.regular-checkbox:checked {
+			background-color: #94bc54;
+			border: 1px solid #adb8c0;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+			color: #fff;
+			outline: none;
+		}		
+		.regular-checkbox:checked:after {
+			content: '\2714';
+			font-size: 14px;
+			position: absolute;
+			top: 0px;
+			left: 3px;
+			color: #fff;
+		}		
+		.big-checkbox {
+			padding: 18px;
+		}
+
+		.big-checkbox:checked:after {
+			font-size: 20px;
+		    left: 10px;
+		    top: 2px;
+		}
+		/*label*/
+		p{
+			padding-top: 20px;
+			label{
+				cursor: pointer;
+				color: $color-home-text;
+				font-size: 32px;
+				padding-left: 0px;
+				font-weight: normal;
+				font-family: $font-sans-pro-light;
+				vertical-align: middle;
+				padding-top: 8px;
+				a{
+					color: $color-home-text;
+					&:focus{
+						outline: none;
+						text-decoration: none;
+					}
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}	
+		}
+		 /*Form  phone*/
+		 @include breakpoint(phone){
+			input.phone-number{
+				font-size: 24px;
+				height: 60px;
+			}		 	
+			i{
+				font-size: 40px;
+				top: 10px;
+			}
+			p{
+				label{
+					font-size: 24px;
+				}
+			}
+		 }
+		 	@include breakpoint(phone-port){
+		 		p{
+		 			label{
+		 				font-size: 16px;
+		 			}
+		 		}
+		 	}
+	}
+}
+
+/*active screen*/
+.active-screen{
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	padding-top: 0px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	@include breakpoint(laptop){
+		bottom: 10px;
+	}
+	@include breakpoint(phone-port){
+		bottom: 5px;
+	}
+	ul{
+		padding-left: 0px;
+		li{
+			width: 16px;
+			height: 16px;
+			margin: 5px;
+			text-decoration: none;
+			list-style-type: none;
+			border-radius: 8px;
+			background: $color-home-text;
+			display: inline-block;
+			&.active{
+				background: $exist-btn-color-back;
+			}
+		}
+	}
+}
+
+
+
+/*newuser*/
+.newuser-form{
+	padding-top: 40px;
+	@include breakpoint(phone-port){
+		padding-top: 10px;
+	}
+	.form-part{
+		position: relative;
+		display: inline-block;
+		height: 90px;
+		width: 46%;
+		float: left;
+		margin: 2%;
+		@include breakpoint(phone){
+			width: 96%;
+		}
+			@include breakpoint(phone-port){
+				height: 40px;
+			}
+		&.new{
+			input{
+				border-color: $new-btn-color-back;
+			}
+		}
+			&.f-name,&.f-lastname{
+				&:after{
+					content: "\f2be";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+					top: 10px;
+					font-size: 50px;
+					color: $exist-btn-color-back;
+				}
+			}	
+			&.f-email{
+				&:after{
+					content: "\f003";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+					top: 10px;
+					font-size: 50px;
+					color: $exist-btn-color-back;
+				}				
+			}	
+			&.f-phone{
+				&:after{
+					content: "\f095";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+					top: 10px;
+					font-size: 50px;
+					color: $exist-btn-color-back;
+				}				
+			}
+			&.f-pass{
+				&:after{
+					content: "\f084";
+					font-family: 'FontAwesome';
+					position: absolute;
+					right: 0px;
+					top: 10px;
+					font-size: 50px;
+					color: $exist-btn-color-back;					
+				}
+			}
+			
+				&.f-phone.new,&.f-email.new,&.f-name.new,&.f-lastname.new,&.f-pass{
+					&:after{
+						color: $new-btn-color-back;
+					}
+				}
+				&.f-phone,&.f-email,&.f-name,&.f-lastname{
+					&:after{
+						@include breakpoint(phone-port){
+							font-size: 18px;
+						}
+					}
+				}
+							
+		input{
+			border-bottom: 1px solid $exist-btn-color-back;
+			color: $color-home-text;
+			font-size: 36px;
+			font-family: $font-sans-pro-regular;
+			width: 100%;
+			height: 90px;
+		    background: transparent;
+		    border-width: 0px 0px 1px 0px;
+		    line-height: 90px;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $exist-btn-color-back;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $exist-btn-color-back;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $exist-btn-color-back;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $exist-btn-color-back;
+			}		
+			&:focus{
+				outline: none;
+				border-color: $new-btn-color-back;
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: $color-home-text;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+				  color: $color-home-text;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+				  color: $color-home-text;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				  color: $color-home-text;
+				}
+			}
+		}
+		@include breakpoint(tablet){
+			input{
+				font-size: 26px;
+			}
+		}
+			@include breakpoint(phone){
+				width: 96%;
+				input{
+					font-size: 26px;
+				}
+			}	
+				@include breakpoint(phone-port){
+					height: 40px;
+					line-height: 40px;
+					input{
+						font-size: 18px;
+						height: 40px;
+						line-height: 40px;
+					}
+				}	
+	}	
+	.privacy-text{
+		text-align: center;
+		color: $color-4;
+		font-size: 20px;
+		@include breakpoint(phone-port){
+			font-size: 12px;
+		}
+	}
+		/*Checkbox*/
+		.regular-checkbox {
+			-webkit-appearance: none;
+			background-color: #fff;
+			border: 1px solid $exist-btn-color-back;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+			padding: 9px;
+			border-radius: 18px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			&:focus{
+				outline: none;
+			}
+
+		}		
+		.regular-checkbox:active, .regular-checkbox:checked:active {
+			outline: none;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+		}
+
+		.regular-checkbox:checked {
+			background-color: #94bc54;
+			border: 1px solid #adb8c0;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+			color: #fff;
+			outline: none;
+		}		
+		.regular-checkbox:checked:after {
+			content: '\2714';
+			font-size: 14px;
+			position: absolute;
+			top: 0px;
+			left: 3px;
+			color: #fff;
+		}		
+		.big-checkbox {
+			padding: 18px;
+			@include breakpoint(phone-port){
+				padding: 10px;
+			}
+		}
+
+		.big-checkbox:checked:after {
+			font-size: 20px;
+		    left: 10px;
+		    top: 2px;
+		    @include breakpoint(phone-port){
+		    	font-size: 18px;
+			    left: 4px;
+			    top: -2px;
+		    }
+		}
+		/*label*/
+		p{
+			padding-top: 20px;
+			text-align: center;
+			label{
+				cursor: pointer;
+				color: $color-home-text;
+				font-size: 32px;
+				padding-left: 0px;
+				font-weight: normal;
+				font-family: $font-sans-pro-light;
+				vertical-align: middle;
+				padding-top: 8px;
+				a{
+					color: $color-home-text;
+					&:focus{
+						outline: none;
+						text-decoration: none;
+					}
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			@include breakpoint(phone){
+				label{
+					font-size: 18px;
+				}
+			}	
+		}
+	.user-btns{
+		padding-top: 10px;
+	}	
+}
+
+/*Rate us screen*/
+.rate-us{
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	padding-top: 160px;
+		@include breakpoint(phone){
+			padding-top: 80px;
+		}
+			@include breakpoint(phone-port){
+				padding-top: 0px;
+			}
+	a{
+		width: 160px;
+		height: 160px;
+		border-radius: 84px;
+		position: relative;
+		background: lighten($background-color, 10%);
+		display: inline-block;
+		font-size: 24px;
+		font-family: $font-sans-pro-regular;
+		font-style: italic;
+		color: #fff;
+		margin-left: 10px;
+		margin-right: 10px;
+		&:nth-child(4){
+			background: lighten($background-color, 18%);
+		}
+		&:nth-child(3){
+			background: lighten($background-color, 26%);
+		}	
+		&:nth-child(2){
+			background: lighten($background-color, 34%);
+		}	
+		&:nth-child(1){
+			background: lighten($background-color, 42%);
+		}				
+		img{
+			@include center(true,true);
+		}
+		span{
+			position: absolute;
+			bottom: -70px;
+			height: 70px;
+			top: inherit;
+		    left: 50%;
+		    -webkit-transform: translate(-50%, 0%);
+		    -ms-transform: translate(-50%, 0%);
+		    transform: translate(-50%, 0%);			
+		}
+		@include breakpoint(tablet){
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			img{
+				width: 70px;
+			}
+		}
+		@include breakpoint(phone){
+			font-size: 18px;
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			margin-top: 50px;
+			img{
+				width: 60px;
+			}
+		}
+			@include breakpoint(phone-port){
+				font-size: 16px;
+				width: 60px;
+				height: 60px;
+				img{
+					width: 40px;
+				}
+			}		
+	}
+}
+
+
+/*Professional screen*/
+.professional{
+	position: relative;
+	margin-top: 20px;
+    height: 60vh;
+    overflow-y: scroll;	
+    @include breakpoint(phone-port){
+    	height: 65vh;
+    }
+	a{
+		position: relative;
+		display: block;
+		padding: 12px;
+		background-color: $exist-btn-color-back;
+		border-radius: 15px;
+		margin-bottom: 15px;
+		img{
+			float: left;
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			margin-right: 20px;
+		}
+		p{
+		    line-height: 80px;
+		    font-size: 30px;
+		    color: $white-color;
+		    font-family: $font-sans-pro-regular;
+		    b{
+		    	font-family: $font-sans-pro-bold;
+		    	font-style: italic;
+		    }
+		}
+		&:focus,&:hover{
+			background-color: darken($exist-btn-color-back, 10%);
+			text-decoration: none;
+		}
+		.map-icon{
+			float: left;
+			font-size: 40px;
+			margin-right: 10px;
+		}
+	}
+	.pro-pad{
+		padding-left: 7.5px;
+		padding-right: 7.5px;
+	}
+	@include breakpoint(phone-port){
+		.pro-pad{
+			width: 100%;
+			a{
+				p{
+					font-size: 24px;
+					line-height: 50px;
+				}
+				img{
+					width: 50px;
+					border-radius: 25px;	
+				}
+			}
+		}
+	}
+}
+
+
+/*Thank you page*/
+#thanks{
+	h4{
+		color: $exist-btn-color-back;
+		font-size: 36px;
+		font-family: $font-sans-pro-regular;
+		@include breakpoint(tablet){
+			font-size: 30px;
+		}
+			@include breakpoint(phone){
+				font-size: 24px;
+			}
+	}
+	.social-share{
+		margin: 100px auto;
+		display: block;
+		text-align: center;
+		position: relative;
+		.social-icon{
+			display: inline-block;
+			position: relative;
+			width: 80px;
+			margin: 0px 5px;
+			a{
+				width: 80px;
+				height: 80px;
+				background: $exist-btn-color-back;
+				border-radius: 40px;
+				color: $white-color;
+				display: inline-block;
+				position: relative;
+				i{
+					font-size: 44px;
+					@include center();
+				}
+			}
+			@include breakpoint(phone-port){
+				width: 50px;
+				a{
+					width: 50px;
+					height: 50px;
+					border-radius: 25px;
+					i{
+						font-size: 26px;
+					}
+				}
+			}
+		}
+	}
+}
+
+	.back-to-home{
+	    display: block;
+	    position: fixed;
+	    text-align: center;
+	    bottom: 120px;	
+	    width: 100%;	
+		a{
+			color: $white-color;
+			padding: 15px 30px;
+			font-size: 30px;
+			font-family: $font-sans-pro-bold;
+			text-align: center;
+			background: transparent;
+			border: 1px solid $color-4;
+			border-radius: 40px;
+			&:hover,&:focus{
+				background: $color-4;
+			}
+			@include breakpoint(phone-port){
+				font-size: 20px;
+				padding: 10px 20px;
+				border-radius: 25px;
+			}
+		}
+	}
+
+
+/*Satsisfaction-step*/
+.small-blue{
+	color: $exist-btn-color-back;
+	font-size: 40px;
+	font-family: $font-sans-pro-regular;
+}
+.satisfaction-icon{
+	background: $exist-btn-color-back;
+	width: 160px;
+	height: 160px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	img{
+		@include center();
+	}
+	@include breakpoint(phone-port){
+		width: 100px;
+		height: 100px;
+		img{
+			width: 80px;
+		}
+	}
+}
+#satisfaction-step-screen{
+	.existing-form{
+		padding-top: 0px;
+	}
+	.satisfaction-icon{
+		margin-top: 60px;
+		@include breakpoint(phone-port){
+			margin-top: 30px;
+		}
+	}
+}
+
+
+/*Select review*/
+.btn-new.rev-btn{
+	background: $exist-btn-color-back;
+	display: block;
+	margin: 15px auto;
+	i{
+		padding-right: 10px;
+	}
+	&:hover,&:focus{
+		background: darken($exist-btn-color-back, 10%);
+	}
+}
+
+#negative-review{
+	.existing-form{
+		padding-top: 25%;
+	}
+}
+
+
+/*Write review screen*/
+#write-review-screen{
+	.bg-lighter{
+		background: lighten($background-color, 8%);
+	}
+	.existing-form form{
+		width: 100%;
+		textarea{
+			background: transparent;
+			color: $white-color;
+			font-size: 26px;
+			font-family: $font-sans-pro-regular;
+			border: 0px;
+			display: inline-block;
+			width: 80%;
+			float: left;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $white-color;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $white-color;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $white-color;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $white-color;
+			}
+			@include breakpoint(phone-port){
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		input[type="file"]{
+			width: 20%;
+			display: inline-block;
+			float: left;
+			@include breakpoint(phone-port){
+				width: 100%;
+			}			
+		}
+		label{
+			color: $white-color;
+			font-size: 26px;
+			@include breakpoint(phone-port){
+				font-size: 18px;
+			}
+		}
+		// .inputfile {
+		// 	width: 0.1px;
+		// 	height: 0.1px;
+		// 	opacity: 0;
+		// 	overflow: hidden;
+		// 	position: absolute;
+		// 	z-index: -1;
+		// }		
+		// .inputfile + label {
+		//     font-size: 1.25em;
+		//     font-weight: 700;
+		//     color: white;
+		//     background-color: black;
+		//     display: inline-block;
+		// }
+		// .inputfile:focus + label,
+		// .inputfile + label:hover {
+		//     background-color: red;
+		// }	
+		// .inputfile + label {
+		// 	cursor: pointer; /* "hand" cursor */
+		// }	
+		// .inputfile:focus + label {
+		// 	outline: 1px dotted #000;
+		// 	outline: -webkit-focus-ring-color auto 5px;
+		// }
+		// .inputfile + label * {
+		// 	pointer-events: none;
+		// }
+	}
+}
+
+/*Audio review*/
+#audio-screen{
+	text-align: center;
+	.existing-form{
+		padding-top: 20px;
+		@include breakpoint(phone){
+			padding-top: 20px;
+		}
+	}
+	.audio-click{
+		width: 160px;
+		height: 160px;
+		font-size: 44px;
+		color: $white-color;
+		background: $exist-btn-color-back;
+		border-radius: 90px;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		border: 10px solid lighten($exist-btn-color-back, 10%);
+		i{
+			color: $white-color;
+			@include center();
+			font-size: 80px;
+		}
+		&:focus,&:hover{
+			background: darken($exist-btn-color-back, 10%);
+		}
+		@include breakpoint(phone){
+			width: 120px;
+			height: 120px;
+			border-radius: 60px;
+			i{
+				font-size: 50px;
+			}
+		}
+			@include breakpoint(phone){
+				width: 90px;
+				height: 90px;
+				border-radius: 45px;
+				i{
+					font-size: 30px;
+				}
+			}		
+	}
+	timer{
+		font-size: 100px;
+		color: $white-color;
+		font-family: $font-sans-pro-regular;
+		@include breakpoint(phone){
+			font-size: 60px;
+		}
+	}
+	#button-slide{
+		button{
+			width: 420px;
+			height: 100px;
+			background: $new-btn-color-back;
+			color: $btn-text-color;
+			display: inline-block;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 38px;
+			font-family: $font-sans-pro-bold;
+			margin: 10px;
+		    border: 0px;
+		    padding-top: 0px;	
+		    position: relative;
+		    i{
+		    	color: $white-color;
+		    	position: absolute;
+		    	left: 20px;
+		    	right: inherit;
+		    	font-size: 40px;
+		    	@include center(false,true);
+		    	@include breakpoint(phone){
+		    		font-size: 20px;
+		    	}
+		    }		
+			@include breakpoint(tablet){
+				width: 300px;
+				height: 80px;
+				border-radius: 40px;
+				font-size: 32px;
+			}
+				@include breakpoint(phone){
+					width: 280px;
+					height: 50px;
+					border-radius: 25px;
+					font-size: 20px;
+				}
+					@include breakpoint(phone-port){
+						width: 100%;
+						margin: 10px 0px;
+					}			
+			&:focus{
+				outline: none;
+				text-decoration: none;
+			}
+			&:hover{
+				background: darken($new-btn-color-back, 10%);
+				text-decoration: none;
+			}			
+		}		
+	}
+}
+
+/*Professional screen styles*/
+#professional{
+	.professional{
+		.item{
+			padding:0px !important;
+			width: 50%;
+			float: left;
+			background-color: transparent;
+			border: none;
+		}
+	}
+}
+
+/*Popup*/
+.popup{
+	width: 80% !important;
+}
+
+
+/*Devices*************************************/
+
+/*Devices styles*/
+@import "devices/kindle-fire";
+
+
+/*Devices*************************************/
